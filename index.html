@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head lang="pt-BR">
+    <title>Macena's Quiz</title>
+
+    <meta charset="utf-8" />
+
+    <!-- Arquivo CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <!-- Materialize Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="general_container">
+      <div id="progress_bar" class="progress_bar"></div>
+      <div class="display home" id="home">
+        <h1>Este é o Quiz do Programador!</h1>
+        <p>
+          Descura o seu nível de conhecimento como programador com essas
+          <span class="blue_bold">5 perguntas</span>:
+        </p>
+        <a class="btn_iniciar" href="#p1" id="init">Iniciar</a>
+      </div>
+
+      <div class="display p1" id="p1">
+        <div class="content">
+          <h2 class="blue_bold">Questão 1 de 5:</h2>
+          <p class="question">
+            HTML é uma linguagem de programação capaz de criar e exibir
+            elementos na tela do usuário ao ser acessada pelo browser.
+          </p>
+          <div class="logo_wrapper">
+            <img
+              src="./issets/html5Logo.png"
+              alt="Imagem da Logo de HTML"
+              class="logo"
+            />
+          </div>
+          <button class="btn certo" id="p1_certo">Certo</button>
+          <button class="btn errado" id="p1_errado">Errado</button>
+          <div class="block_container msg_erro hidden" id="block_p1">
+            <div class="block_content">
+              <h1 id="msg_p1">Você errou a questão!</h1>
+              <a href="#p2" class="btn_next"
+                >Continuar <i class="material-icons">arrow_forward</i></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="display p2" id="p2">
+        <div class="content">
+          <h2 class="blue_bold">Questão 2 de 5:</h2>
+          <p class="question">
+            CSS é um mecanismo usado para fazer estilizações em uma página web.
+          </p>
+          <div class="logo_wrapper">
+            <img
+              src="./issets/css3Logo.png"
+              alt="Imagem da Logo de CSS"
+              class="logo"
+            />
+          </div>
+          <button class="btn certo" id="p2_certo">Certo</button>
+          <button class="btn errado" id="p2_errado">Errado</button>
+          <div class="block_container msg_erro hidden" id="block_p2">
+            <div class="block_content">
+              <h1 id="msg_p2">Você errou a questão!</h1>
+              <a href="#p3" class="btn_next"
+                >Continuar <i class="material-icons">arrow_forward</i></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="display p3" id="p3">
+        <div class="content">
+          <h2 class="blue_bold">Questão 3 de 5:</h2>
+          <p class="question">
+            Qual desses foi um dos responsáveis pela criação da marca
+            mundialmente famosa "Microsoft"?
+          </p>
+          <div class="img_container">
+            <div class="img_wrapper">
+              <img
+                id="p3_elon"
+                src="./issets/ElonMusk.jpg"
+                alt="Foto de Elon Musk"
+              />
+              <p>Elon Musk</p>
+            </div>
+            <div class="img_wrapper">
+              <img
+                id="p3_bill"
+                src="./issets/BillGates.jpg"
+                alt="Foto de Bill Gates"
+              />
+              <p>Bill Gates</p>
+            </div>
+            <div class="img_wrapper">
+              <img
+                id="p3_jeff"
+                src="./issets/JeffBezos.jpeg"
+                alt="Foto de Jeff Bezos"
+              />
+              <p>Jeff Bezos</p>
+            </div>
+            <div class="img_wrapper">
+              <img
+                id="p3_luciano"
+                src="./issets/LucianoHang.jpg"
+                alt="Foto de Luciano Hang"
+              />
+              <p>Luciano Hang</p>
+            </div>
+          </div>
+          <div class="block_container msg_erro hidden" id="block_p3">
+            <div class="block_content">
+              <h1 id="msg_p3">Você errou a questão!</h1>
+              <a href="#p4" class="btn_next"
+                >Continuar <i class="material-icons">arrow_forward</i></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="display p4" id="p4">
+        <div class="content">
+          <h2 class="blue_bold">Questão 4 de 5:</h2>
+          <p class="question">
+            Digite o nome da linguagem de programação mais usada para o
+            desenvolvimento Web atualmente.
+          </p>
+          <input
+            type="text"
+            id="p4_answer"
+            class="text_answer"
+            maxlength="20"
+          />
+          <button id="p4_enviar" class="btn enviar">enviar</button>
+          <div class="block_container msg_erro hidden" id="block_p4">
+            <div class="block_content">
+              <h1 id="msg_p4">Você errou a questão!</h1>
+              <a href="#p5" class="btn_next"
+                >Continuar <i class="material-icons">arrow_forward</i></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="display p5" id="p5">
+        <div class="content">
+          <h2 class="blue_bold">Questão 5 de 5:</h2>
+          <p class="question">
+            Selecione a opção que <b>não</b> representa um sistema operacional.
+          </p>
+          <div class="btn_container">
+            <button class="btn_answer" id="p5_win">Windows</button>
+            <button class="btn_answer" id="p5_mac">MacOS</button>
+            <button class="btn_answer" id="p5_ubu">Ubuntu</button>
+            <button class="btn_answer" id="p5_and">Android</button>
+            <button class="btn_answer" id="p5_rod">Facebook</button>
+          </div>
+          <div class="block_container msg_erro hidden" id="block_p5">
+            <div class="block_content">
+              <h1 id="msg_p5">Você errou a questão!</h1>
+              <a href="#fim" class="btn_next"
+                >Continuar <i class="material-icons">arrow_forward</i></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="display fim" id="fim">
+        <div class="content">
+          <h1 class="blue_bold">Você chegou ao fim!</h1>
+          <h2>
+            Sua pontuação foi de:
+            <span id="pontuacao" class="blue_bold"></span> pontos.
+          </h2>
+          <div class="placar_container">
+            <div class="pergunta_placar">
+              <p>Pergunta 1</p>
+              <div class="img_placar">
+                <img
+                  id="placar_img_1"
+                  src="issets/erro.png"
+                  alt="Imagem do Placar"
+                />
+              </div>
+            </div>
+            <div class="pergunta_placar">
+              <p>Pergunta 2</p>
+              <div class="img_placar">
+                <img
+                  id="placar_img_2"
+                  src="issets/erro.png"
+                  alt="Imagem do Placar"
+                />
+              </div>
+            </div>
+            <div class="pergunta_placar">
+              <p>Pergunta 3</p>
+              <div class="img_placar">
+                <img
+                  id="placar_img_3"
+                  src="issets/erro.png"
+                  alt="Imagem do Placar"
+                />
+              </div>
+            </div>
+            <div class="pergunta_placar">
+              <p>Pergunta 4</p>
+              <div class="img_placar">
+                <img
+                  id="placar_img_4"
+                  src="issets/erro.png"
+                  alt="Imagem do Placar"
+                />
+              </div>
+            </div>
+            <div class="pergunta_placar">
+              <p>Pergunta 5</p>
+              <div class="img_placar">
+                <img
+                  id="placar_img_5"
+                  src="issets/erro.png"
+                  alt="Imagem do Placar"
+                />
+              </div>
+            </div>
+          </div>
+          <button class="btn reiniciar" id="restart">
+            <i class="material-icons">autorenew</i>Reiniciar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Arquivo JS -->
+    <script src="app.js"></script>
+  </body>
+</html>
